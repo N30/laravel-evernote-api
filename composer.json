@@ -1,0 +1,37 @@
+{
+    "name": "n30/laravel-evernote-api",
+    "description": "Laravel Evernote Api Laravel 11+",
+    "type": "library",
+    "require": {
+        "illuminate/support": "^11.42"
+    },
+    "autoload": {
+        "psr-4": {
+            "N30\\LaravelEvernoteApi\\": "src/"
+        },
+        "psr-0": {
+            "Evernote": "thirdparty/src/", 
+            "Thrift": "thirdparty/src/",
+            "EvernoteSDK": "thirdparty/src/"
+        },
+        "classmap": [
+            "thirdparty/src/EDAM"
+        ]
+    },
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Neo Nosrati"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "N30\\LaravelEvernoteApi\\Providers\\LaravelEvernoteServiceProvider"
+            ],
+            "aliases": {
+                "EvernoteAPI": "\\N30\\LaravelEvernoteApi\\Facades\\EvernoteAPI"
+            }
+        }
+    }
+}
