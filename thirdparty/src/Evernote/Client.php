@@ -921,7 +921,7 @@ class Client
     /**** protected methods ****/
     /***************************/
 
-    protected function getNoteStore($noteStoreUrl)
+    public function getNoteStore($noteStoreUrl)
     {
         return $this->getAdvancedClient()->getNoteStore($noteStoreUrl);
     }

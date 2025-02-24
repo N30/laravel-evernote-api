@@ -18,7 +18,7 @@ class OauthHandler
 
     protected $params = array();
 
-    public function __construct($sandbox = true, $supportLinkedSandbox = false, $china = false)
+    public function __construct($sandbox = false, $supportLinkedSandbox = false, $china = false)
     {
         $this->sandbox              = $sandbox;
         $this->supportLinkedSandbox = $supportLinkedSandbox;
@@ -80,7 +80,8 @@ class OauthHandler
 
             $this->params['oauth_token']    = $_GET['oauth_token'];
             $this->params['oauth_verifier'] = $_GET['oauth_verifier'];
-            unset($this->params['oauth_callback']);
+            
+            //unset($this->params['oauth_callback']);
 
             return $this->getTemporaryCredentials();
         }
