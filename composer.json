@@ -3,7 +3,7 @@
     "description": "Laravel Evernote Api Laravel 11+",
     "type": "library",
     "require": {
-        "illuminate/support": "^11.42"
+        "illuminate/support": "*"
     },
     "autoload": {
         "psr-4": {
